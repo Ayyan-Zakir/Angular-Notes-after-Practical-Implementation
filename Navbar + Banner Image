@@ -1,0 +1,114 @@
+home html
+
+<div class="main-bg-div">
+  <div class="container">
+    <h1>This is the dummy heading</h1>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
+      debitis ipsam fuga sapiente nihil neque doloribus est minima nobis
+      corporis?
+    </p>
+  </div>
+</div>
+
+
+html css
+
+
+.main-bg-div {
+    background-image: url(https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    color: whitesmoke;
+    font-size: 80px;
+    font-weight: 600;
+
+}
+p {
+    color: lightgray;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+navbar html
+
+  <div class="container-fluid g-0">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+          <a class="navbar-brand" routerLink="/" routerLinkActive="active">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav first-ul ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link"  aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
+              </li>
+            </ul>
+    
+            <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/todo-list" routerLinkActive="active">Todo List</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/api-data-fetch" routerLinkActive="active">Api Data Fetch</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                  <a class="nav-link" routerLink="/todo-list-ls">Todo List LS</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+  </div>
+  
+  
+  navbar css
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar-collapse ul li {
+    padding: 0 10px;
+}
+.navbar-collapse .first-ul li{
+    position: relative;
+    
+}
+.navbar-collapse .first-ul li::after{
+    position: absolute;
+    display: block;
+    background-color: red;
+    height: 80%;
+    width: 3px;
+    content: '';
+    right: 0;
+    top:10%;
+}
+.navbar-collapse ul li a, .navbar-brand {
+ font-weight: 600;
+color: black;
+}
+.active {
+    border-radius: 30pc;
+    transform: scale(1.1);
+    transition: all 0.3s ;
+}
