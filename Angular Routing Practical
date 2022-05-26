@@ -1,0 +1,31 @@
+App Module File :
+
+
+1- import { RouterModule, Routes } from '@angular/router';
+2- Imports : RouterModule.forRoot(appRoutes)
+Array with routes :
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'about-us', component: AboutUsComponent},
+  {path: 'contact-us', component: ContactUsComponent},
+  {path: 'todo-list', component: TodoListComponent},
+  {path: 'api-data-fetch', component: ApiDataFetchComponent},
+  {path: 'todo-list-ls', component: TodoListLsComponent},
+
+];
+
+
+App Module HTML File:
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+
+Navbar File:
+
+navbar brand
+<a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Logo</a>
+<a class="navbar-brand" routerLink="/">Logo</a>
+other links
+<a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
+
+style active class in CSS file, so it will get implemented on active tab
